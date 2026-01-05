@@ -16,6 +16,8 @@ id is in the form of objectid --> ('1232b32828j')
 
 Object id represented as _id
 
+DBMS query is faster than frontend/backend functionalities 
+
 <!-- CMDS: -->
  
 1) use db
@@ -57,6 +59,10 @@ Object id represented as _id
 
 <!-- Update -->
 
+1) set
+2) inc
+3) push
+
 23) db.products.updateOne(
   {name: "Gaming Laptop"},
   {$set: {price: 90000}}
@@ -71,3 +77,8 @@ Object id represented as _id
   {category: "Electronics"},
   {$inc: {price: 500}}
 )
+
+<!-- Delete -->
+
+26) deleteOne
+27) deleteMany

@@ -21,20 +21,3 @@ use("ecommerce")
 // db.products.find().sort({price: -1}).limit(2)
 
 // db.products.find().skip(1).limit(1)
-
-// db.products.updateOne(
-//   {name: "Gaming Laptop"},
-//   {$set: {price: 90000}}
-// )
-
-// db.products.updateMany(
-//   {category: "Electronics"},
-//   {$set: {price: 500}}
-// )
-
-// db.products.updateMany(
-//   {category: "Electronics"},
-//   {$inc: {stock: 11}}
-// )
-
-// db.products.find()
