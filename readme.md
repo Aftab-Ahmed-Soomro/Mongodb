@@ -1,3 +1,5 @@
+<!-- Basics -->
+
 you can store data in:
 1) local db --> array
 2) file
@@ -14,7 +16,7 @@ id is in the form of objectid --> ('1232b32828j')
 
 Object id represented as _id
 
-cmds:
+<!-- CMDS: -->
  
 1) use db
 2) show db
@@ -22,11 +24,50 @@ cmds:
 4) show collection
 5) show collections
 6) cls 
-7) db.collection.insertOne({
+7) db.dropDatabase()
+
+<!-- Insert -->
+8) db.collection.insertOne({
   "name":"Aftab Ahmed"
 })
-8) db.collection.insertMany([{
+9) db.collection.insertMany([{
   "name":"Aftab Ahmed"
 },{
   "name":"Zeeshan Haider"
 }])
+
+
+<!-- Find -->
+10) db.find() --> all data in collection
+11) db.products.find({name: "Wireless Mouse"}) --> single find or same name many
+12) db.products.find({}, {name: 1, price: 1, _id: 0}) --> find specific entities
+13) db.products.limit(2) --> pagination
+14) db.products.sort(1) --> ascending
+15) db.products.sort(-1) --> descending
+16) db.products.skip(10)
+
+<!-- Comparison Operators -->
+
+17) $gt
+18) $gte
+19) $lt
+20) $lte
+21) $or
+22) $and
+
+<!-- Update -->
+
+23) db.products.updateOne(
+  {name: "Gaming Laptop"},
+  {$set: {price: 90000}}
+)
+
+24) db.products.updateMany(
+  {category: "Electronics"},
+  {$set: {price: 500}}
+)
+
+25) db.products.updateMany(
+  {category: "Electronics"},
+  {$inc: {price: 500}}
+)
